@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { buyCake } from '../redux'
+import { buyCake } from '../redux/index'
 
 function CakeContainer(props) {
     return (
@@ -11,12 +11,14 @@ function CakeContainer(props) {
     )
 }
 
+//below function is used to map the redux state to prop that can be used in react component
 const mapStateToProps = state => {
     return {
         numOfCakes: state.numOfCakes
     }
 }
 
+//below function is used to dispatch the action from react componen to reducer and finally to store of redux.
 const mapDispatchToProps = dispatch => {
     return {
         buyCake: () => { dispatch(buyCake()) }
