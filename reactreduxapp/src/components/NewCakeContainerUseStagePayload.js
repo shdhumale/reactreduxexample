@@ -7,6 +7,7 @@ function NewCakeContainerUseStagePayload(props) {
     return (
         <div>
             <h1>Number of Cake -- {props.numOfCakes}</h1>
+            {/* <input type='text' value={number} onChange={e => setNumber(e.target.value)} /> */}
             <input type='text' value={number} onChange={e => setNumber(e.target.value)} />
             {/* <button onClick={props.buyCake}>Buy Cake</button> */}
             <button onClick={() => props.buyCake(number)}>Buy {number} Cake</button>
